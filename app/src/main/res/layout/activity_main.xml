@@ -1,30 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<demo.com.addonelayoutforallscreen.MultiStateView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/multiStateView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:msv_animateViewChanges="true"
-    app:msv_emptyView="@layout/empty_view"
-    app:msv_errorView="@layout/error_view"
-    app:msv_loadingView="@layout/loading_view"
-    app:msv_viewState="content"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="ContentView" />
+            android:onClick="onError" />
 
-    </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onEmpty" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onContent" />
+    </LinearLayout>
 
 
-</demo.com.addonelayoutforallscreen.MultiStateView>
+    <demo.com.addonelayoutforallscreen.MultiStateView
+        android:id="@+id/multiStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_animateViewChanges="true"
+        app:msv_emptyView="@layout/empty_view"
+        app:msv_errorView="@layout/error_view"
+        app:msv_loadingView="@layout/loading_view"
+        app:msv_viewState="content"
+        tools:context=".MainActivity">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="ContentView" />
+
+        </RelativeLayout>
+
+
+    </demo.com.addonelayoutforallscreen.MultiStateView>
+
+</LinearLayout>
+

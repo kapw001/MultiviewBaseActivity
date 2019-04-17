@@ -1,6 +1,7 @@
 package demo.com.addonelayoutforallscreen;
 
 import android.os.Handler;
+import android.view.View;
 
 public class MainActivity extends MultiStateViewActivity {
 
@@ -41,5 +42,18 @@ public class MainActivity extends MultiStateViewActivity {
             }
         }, 3000);
 
+    }
+
+    public void onError(View view) {
+
+        showError();
+    }
+
+    public void onEmpty(View view) {
+        showEmpty();
+    }
+
+    public void onContent(View view) {
+        showContent();
     }
 }

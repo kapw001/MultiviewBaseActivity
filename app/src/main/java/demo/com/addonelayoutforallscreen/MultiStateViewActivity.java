@@ -63,7 +63,7 @@ public abstract class MultiStateViewActivity extends AppCompatActivity {
 
     public void showEmpty() {
 
-        multiStateView.setViewState(MultiStateView.VIEW_STATE_ERROR);
+        multiStateView.setViewState(MultiStateView.VIEW_STATE_EMPTY);
     }
 
     public void showEmpty(String emptyMsg) {
